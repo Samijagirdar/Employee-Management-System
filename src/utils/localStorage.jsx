@@ -1,0 +1,206 @@
+const admin = [
+  {
+    id: 1,
+    email: "admin@example.com",
+    password: "123",
+  },
+];
+
+const employees = [
+  {
+    id: 2,
+    email: "employee1@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Prepare Report",
+        taskDescription: "Create monthly sales report",
+        taskDate: "2026-05-01",
+        category: "Reporting",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Fix Bug",
+        taskDescription: "Resolve login issue",
+        taskDate: "2026-04-28",
+        category: "Development",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        taskTitle: "Client Call",
+        taskDescription: "Discuss project requirements",
+        taskDate: "2026-04-30",
+        category: "Communication",
+      },
+    ],
+  },
+  {
+    id: 3,
+    email: "employee2@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Design UI",
+        taskDescription: "Create dashboard UI",
+        taskDate: "2026-05-02",
+        category: "Design",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Update Docs",
+        taskDescription: "Update API documentation",
+        taskDate: "2026-04-29",
+        category: "Documentation",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        taskTitle: "Testing",
+        taskDescription: "Perform unit testing",
+        taskDate: "2026-04-27",
+        category: "QA",
+      },
+    ],
+  },
+  {
+    id: 4,
+    email: "employee3@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Deploy App",
+        taskDescription: "Deploy to production",
+        taskDate: "2026-05-03",
+        category: "DevOps",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Code Review",
+        taskDescription: "Review teammate code",
+        taskDate: "2026-04-30",
+        category: "Development",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        taskTitle: "Optimize DB",
+        taskDescription: "Improve database queries",
+        taskDate: "2026-04-26",
+        category: "Database",
+      },
+    ],
+  },
+  {
+    id: 5,
+    email: "employee4@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Marketing Plan",
+        taskDescription: "Create campaign strategy",
+        taskDate: "2026-05-04",
+        category: "Marketing",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "SEO Update",
+        taskDescription: "Improve website SEO",
+        taskDate: "2026-04-25",
+        category: "Marketing",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        taskTitle: "Ad Campaign",
+        taskDescription: "Launch ad campaign",
+        taskDate: "2026-04-28",
+        category: "Advertising",
+      },
+    ],
+  },
+  {
+    id: 6,
+    email: "employee5@example.com",
+    password: "123",
+    tasks: [
+      {
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false,
+        taskTitle: "Customer Support",
+        taskDescription: "Handle support tickets",
+        taskDate: "2026-05-01",
+        category: "Support",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false,
+        taskTitle: "Feedback Analysis",
+        taskDescription: "Analyze user feedback",
+        taskDate: "2026-04-29",
+        category: "Analysis",
+      },
+      {
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true,
+        taskTitle: "System Check",
+        taskDescription: "Check system logs",
+        taskDate: "2026-04-27",
+        category: "Maintenance",
+      },
+    ],
+  },
+];
+
+export const setLocalStorage = () => {
+  localStorage.setItem("employees", JSON.stringify(employees));
+  localStorage.setItem("admin", JSON.stringify(admin));
+};
+
+export const getLocalStorage = () => {
+  const employees = JSON.parse(localStorage.getItem("employees"));
+  const admin = JSON.parse(localStorage.getItem("admin"));
+  console.log(employees, admin);
+};
