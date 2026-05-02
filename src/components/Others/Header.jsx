@@ -1,11 +1,13 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ data }) => {
+  console.log(data);
+
   return (
     <div className="flex items-end justify-between">
       <h1 className="font-medium text-2xl">
         Hello <br />
-        <span className="font-semibold text-3xl">Sarthak 👋</span>
+        <span className="font-semibold text-3xl">{data.firstName} 👋</span>
       </h1>
       <button className="bg-red-600 text-lg font-medium text-white px-5 py-2 rounded-sm">
         Log Out
